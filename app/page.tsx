@@ -69,15 +69,14 @@ export default function Home() {
           {/* Logo & Brand */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-white-500 to-white-600 rounded-2xl shadow-2xl transform hover:scale-110 transition-transform overflow-hidden">
-                <Image 
-                  src="/logo.png" 
-                  alt="CourseVault" 
-                  width={50} 
-                  height={50}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="relative w-20 h-20">
+              <Image 
+                src="/logo.png" 
+                alt="CourseVault" 
+                fill 
+                className="object-cover"
+              />
+            </div>
               <h2 className="text-4xl font-bold text-white">
                 CourseVault
               </h2>
