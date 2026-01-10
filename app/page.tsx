@@ -67,7 +67,7 @@ export default function Home() {
         <div className="text-center mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
             {/* Logo - Use img tag instead of Next Image for reliability */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl flex items-center justify-center">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-white-e500 to-white-600 rounded-2xl shadow-2xl flex items-center justify-center">
               <img 
                 src="/logo.png" 
                 alt="CourseVault" 
@@ -233,7 +233,7 @@ export default function Home() {
             Made with passion for students everywhere
           </p>
           <p className="text-gray-500 text-[10px] sm:text-xs mt-2">
-            © 2025 CourseVault. All rights reserved.
+            © 2026 CourseVault. All rights reserved.
           </p>
         </div>
       </div>
