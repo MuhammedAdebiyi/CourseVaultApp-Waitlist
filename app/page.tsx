@@ -66,18 +66,9 @@ export default function Home() {
         {/* Logo & Brand */}
         <div className="text-center mb-8 sm:mb-12">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-            {/* Logo - Use img tag instead of Next Image for reliability */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-white-e500 to-white-600 rounded-2xl shadow-2xl flex items-center justify-center">
-              <img 
-                src="/logo.png" 
-                alt="CourseVault" 
-                className="w-full h-full object-cover rounded-2xl"
-                onError={(e) => {
-                  // Fallback to text if image fails
-                  e.currentTarget.style.display = 'none';
-                  e.currentTarget.parentElement!.innerHTML = '<span class="text-2xl sm:text-3xl font-bold text-white">CV</span>';
-                }}
-              />
+            {/* Logo - Gradient fallback */}
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl flex items-center justify-center">
+              <span className="text-2xl sm:text-3xl font-bold text-white">CV</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white">
               CourseVault
@@ -233,7 +224,7 @@ export default function Home() {
             Made with passion for students everywhere
           </p>
           <p className="text-gray-500 text-[10px] sm:text-xs mt-2">
-            © 2026 CourseVault. All rights reserved.
+            © 2025 CourseVault. All rights reserved.
           </p>
         </div>
       </div>

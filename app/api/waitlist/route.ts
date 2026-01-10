@@ -30,13 +30,24 @@ export async function POST(request: NextRequest) {
       VALUES (${email}, NOW(), false)
     `;
 
-    // Send welcome email (non-blocking)
-    sendWelcomeEmail(email).catch(err => 
-      console.error('Failed to send email:', err)
-    );
+    // Send welcome email with better error handling
+    try {
+      console.log('Attempting to send welcome email to:', email);
+      await sendWelcomeEmail(email);
+      console.log('Welcome email sent successfully to:', email);
+    } catch (emailError: any) {
+      console.error('Failed to send welcome email:', emailError);
+      console.error('Email error details:', {
+        message: emailError.message,
+        code: emailError.code,
+        response: emailError.response
+      });
+      // Don't fail the whole request, just log it
+    }
 
     return NextResponse.json({ message: 'Success', email });
   } catch (error) {
+    console.error('Waitlist signup error:', error);
     if (error instanceof z.ZodError) {
       return NextResponse.json(
         { error: error.issues[0].message },
