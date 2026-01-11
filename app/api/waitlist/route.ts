@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
         code: emailError.code,
         response: emailError.response
       });
-      // Don't fail the whole request, just log it
+      
     }
 
     return NextResponse.json({ message: 'Success', email });
