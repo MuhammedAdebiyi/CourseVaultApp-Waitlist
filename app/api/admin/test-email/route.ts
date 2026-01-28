@@ -1,4 +1,3 @@
-// app/api/test-email/route.ts
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
@@ -26,7 +25,7 @@ export async function GET() {
     await transporter.verify();
 
     // Try sending test email
-    const testEmail = process.env.GMAIL_USER; // Send to yourself
+    const testEmail = process.env.GMAIL_USER; 
     
     const info = await transporter.sendMail({
       from: `CourseVault <${process.env.GMAIL_USER}>`,
