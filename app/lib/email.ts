@@ -51,7 +51,7 @@ export async function sendWelcomeEmail(email: string) {
                 <tr>
                   <td style="padding: 40px 40px 20px 40px;">
                     <h2 style="margin: 0; color: #1a1a1a; font-size: 28px; font-weight: 600; text-align: center; line-height: 1.3;">
-                      Keep it simple.<br>Keep it separate.
+                      From PDF to mastery.<br>Powered by AI.
                     </h2>
                   </td>
                 </tr>
@@ -61,10 +61,10 @@ export async function sendWelcomeEmail(email: string) {
                   <td style="padding: 20px 40px 40px 40px;">
                     <div style="background: linear-gradient(135deg, #e8ebf7 0%, #f3e8f7 100%); border-radius: 16px; padding: 32px; margin: 20px 0;">
                       <p style="margin: 0 0 20px 0; color: #2a2a2a; font-size: 16px; line-height: 1.7;">
-                        Your biggest study challenge? Staying organized across multiple courses and materials.
+                        You're now on the waitlist for something special. A platform that transforms your study materials into intelligent learning experiences.
                       </p>
                       <p style="margin: 0; color: #2a2a2a; font-size: 16px; line-height: 1.7;">
-                        But what if your <strong style="color: #667eea;">Study Space</strong> only had access to your Study materials? And your Personal space only your Personal content?
+                        Upload any PDF. Get <strong style="color: #667eea;">AI-powered quizzes, flashcards, summaries, and more</strong>—automatically generated to help you ace your exams.
                       </p>
                     </div>
                   </td>
@@ -176,12 +176,12 @@ COURSEVAULT
 
 January 30, 2026
 
-Keep it simple.
-Keep it separate.
+From PDF to mastery.
+Powered by AI.
 
-Your biggest study challenge? Staying organized across multiple courses and materials.
+You're now on the waitlist for something special. A platform that transforms your study materials into intelligent learning experiences.
 
-But what if your Study Space only had access to your Study materials? And your Personal space only your Personal content?
+Upload any PDF. Get AI-powered quizzes, flashcards, summaries, and more—automatically generated to help you ace your exams.
 
 What happens next:
 → We'll notify you when we launch
@@ -424,6 +424,7 @@ As an early waitlist member, you have exclusive early access to everything we've
 
 Your early bird benefits:
 
+→ Priority support
 → Early access to new features
 → Exclusive community access
 
