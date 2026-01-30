@@ -61,10 +61,10 @@ export async function sendWelcomeEmail(email: string) {
                   <td style="padding: 20px 40px 40px 40px;">
                     <div style="background: linear-gradient(135deg, #e8ebf7 0%, #f3e8f7 100%); border-radius: 16px; padding: 32px; margin: 20px 0;">
                       <p style="margin: 0 0 20px 0; color: #2a2a2a; font-size: 16px; line-height: 1.7;">
-                        You're now on the waitlist for something special. A platform that transforms your study materials into intelligent learning experiences.
+                        Tired of spending hours creating study materials from your lecture notes and textbooks?
                       </p>
                       <p style="margin: 0; color: #2a2a2a; font-size: 16px; line-height: 1.7;">
-                        Upload any PDF. Get <strong style="color: #667eea;">AI-powered quizzes, flashcards, summaries, and more</strong>—automatically generated to help you ace your exams.
+                        CourseVault's AI reads your PDFs and instantly generates <strong style="color: #667eea;">practice quizzes, smart flashcards, detailed summaries, and mind maps</strong>. Study smarter, not harder.
                       </p>
                     </div>
                   </td>
@@ -179,9 +179,9 @@ January 30, 2026
 From PDF to mastery.
 Powered by AI.
 
-You're now on the waitlist for something special. A platform that transforms your study materials into intelligent learning experiences.
+Tired of spending hours creating study materials from your lecture notes and textbooks?
 
-Upload any PDF. Get AI-powered quizzes, flashcards, summaries, and more—automatically generated to help you ace your exams.
+CourseVault's AI reads your PDFs and instantly generates practice quizzes, smart flashcards, detailed summaries, and mind maps. Study smarter, not harder.
 
 What happens next:
 → We'll notify you when we launch
@@ -423,7 +423,6 @@ As an early waitlist member, you have exclusive early access to everything we've
 → Start learning now: https://coursevault.app
 
 Your early bird benefits:
-
 → Priority support
 → Early access to new features
 → Exclusive community access
