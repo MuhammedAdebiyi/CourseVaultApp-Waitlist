@@ -12,7 +12,7 @@ export async function sendWelcomeEmail(email: string) {
   const mailOptions = {
     from: `CourseVault <${process.env.GMAIL_USER}>`,
     to: email,
-    subject: '🎉 Welcome to CourseVault Waitlist!',
+    subject: 'Welcome to CourseVault',
     html: `
       <!DOCTYPE html>
       <html>
@@ -21,97 +21,145 @@ export async function sendWelcomeEmail(email: string) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to CourseVault</title>
       </head>
-      <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f3f4f6;">
+      <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #faf9f6;">
         <table role="presentation" style="width: 100%; border-collapse: collapse;">
           <tr>
-            <td align="center" style="padding: 40px 0;">
-              <table role="presentation" style="width: 600px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <td align="center" style="padding: 60px 20px;">
+              <table role="presentation" style="width: 560px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 24px; overflow: hidden;">
                 
-                <!-- Header with gradient -->
+                <!-- Logo/Header -->
                 <tr>
-                  <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
-                    <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: bold;">
-                      🚀 Welcome to CourseVault!
-                    </h1>
+                  <td style="padding: 50px 40px 30px 40px; text-align: center;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 16px 32px; border-radius: 12px;">
+                      <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: 0.5px;">
+                        COURSEVAULT
+                      </h1>
+                    </div>
                   </td>
                 </tr>
                 
-                <!-- Main content -->
+                <!-- Date -->
                 <tr>
-                  <td style="padding: 40px 30px;">
-                    <h2 style="margin: 0 0 20px 0; color: #1f2937; font-size: 24px; font-weight: 600;">
-                      You're on the list! 🎉
-                    </h2>
-                    
-                    <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 1.6;">
-                      Thank you for joining the <strong>CourseVault</strong> waitlist! You're one step closer to revolutionizing how you study.
+                  <td style="padding: 0 40px;">
+                    <p style="margin: 0; color: #999; font-size: 13px; text-align: center; letter-spacing: 1px; text-transform: uppercase;">
+                      January 30, 2026
                     </p>
-                    
-                    <div style="background-color: #f9fafb; border-left: 4px solid #667eea; padding: 20px; margin: 30px 0; border-radius: 8px;">
-                      <p style="margin: 0 0 15px 0; color: #1f2937; font-size: 16px; font-weight: 600;">
-                        What's Next?
+                  </td>
+                </tr>
+                
+                <!-- Main Heading -->
+                <tr>
+                  <td style="padding: 40px 40px 20px 40px;">
+                    <h2 style="margin: 0; color: #1a1a1a; font-size: 28px; font-weight: 600; text-align: center; line-height: 1.3;">
+                      Keep it simple.<br>Keep it separate.
+                    </h2>
+                  </td>
+                </tr>
+                
+                <!-- Content Box -->
+                <tr>
+                  <td style="padding: 20px 40px 40px 40px;">
+                    <div style="background: linear-gradient(135deg, #e8ebf7 0%, #f3e8f7 100%); border-radius: 16px; padding: 32px; margin: 20px 0;">
+                      <p style="margin: 0 0 20px 0; color: #2a2a2a; font-size: 16px; line-height: 1.7;">
+                        Your biggest study challenge? Staying organized across multiple courses and materials.
                       </p>
-                      <ul style="margin: 0; padding-left: 20px; color: #4b5563; font-size: 15px; line-height: 1.8;">
-                        <li>We'll email you when we launch</li>
-                        <li>Get early access to all premium features</li>
-                        <li>Exclusive discounts for early supporters</li>
-                        <li>Be part of shaping the future of AI-powered learning</li>
-                      </ul>
-                    </div>
-                    
-                    <div style="margin: 30px 0;">
-                      <h3 style="margin: 0 0 15px 0; color: #1f2937; font-size: 18px; font-weight: 600;">
-                        Coming Features:
-                      </h3>
-                      <table role="presentation" style="width: 100%; border-collapse: collapse;">
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            🧠 AI Quiz Generator
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            ✨ Smart Flashcards
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            💬 PDF Chat Assistant
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            📄 AI Summaries
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            👥 Collaborative Study Rooms
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            ⏱️ Pomodoro Timer
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                    
-                    <div style="text-align: center; margin: 30px 0;">
-                      <p style="margin: 0 0 15px 0; color: #4b5563; font-size: 15px;">
-                        Stay connected with us:
+                      <p style="margin: 0; color: #2a2a2a; font-size: 16px; line-height: 1.7;">
+                        But what if your <strong style="color: #667eea;">Study Space</strong> only had access to your Study materials? And your Personal space only your Personal content?
                       </p>
-                      <div>
-                        <a href="https://x.com/coursevaultapp" style="display: inline-block; margin: 0 10px; color: #667eea; text-decoration: none; font-weight: 600;">Twitter</a>
-                        <a href="https://www.instagram.com/coursevault.app/" style="display: inline-block; margin: 0 10px; color: #667eea; text-decoration: none; font-weight: 600;">Instagram</a>
-                        <a href="https://www.tiktok.com/@coursevaultapp" style="display: inline-block; margin: 0 10px; color: #667eea; text-decoration: none; font-weight: 600;">TikTok</a>
-                      </div>
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- What's Next Section -->
+                <tr>
+                  <td style="padding: 0 40px 30px 40px;">
+                    <h3 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: 600;">
+                      What happens next
+                    </h3>
+                    <div style="margin-bottom: 16px;">
+                      <p style="margin: 0; color: #4a4a4a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                        We'll notify you when we launch
+                      </p>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                      <p style="margin: 0; color: #4a4a4a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                        Early access to all premium features
+                      </p>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                      <p style="margin: 0; color: #4a4a4a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                        Exclusive pricing for early supporters
+                      </p>
+                    </div>
+                    <div>
+                      <p style="margin: 0; color: #4a4a4a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                        <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                        Help shape the future of AI-powered learning
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- Features Grid -->
+                <tr>
+                  <td style="padding: 0 40px 40px 40px;">
+                    <h3 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: 600;">
+                      Coming soon
+                    </h3>
+                    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px; width: 50%;">
+                          AI Quiz Generator
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px; width: 50%;">
+                          Smart Flashcards
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px;">
+                          PDF Chat Assistant
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px;">
+                          AI Summaries
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px;">
+                          Study Rooms
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px;">
+                          Pomodoro Timer
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                
+                <!-- Social Links -->
+                <tr>
+                  <td style="padding: 0 40px 50px 40px; text-align: center;">
+                    <p style="margin: 0 0 16px 0; color: #6a6a6a; font-size: 14px;">
+                      Stay connected
+                    </p>
+                    <div>
+                      <a href="https://x.com/coursevaultapp" style="display: inline-block; margin: 0 12px; color: #667eea; text-decoration: none; font-size: 14px; font-weight: 500;">Twitter</a>
+                      <a href="https://www.instagram.com/coursevault.app/" style="display: inline-block; margin: 0 12px; color: #667eea; text-decoration: none; font-size: 14px; font-weight: 500;">Instagram</a>
+                      <a href="https://www.tiktok.com/@coursevaultapp" style="display: inline-block; margin: 0 12px; color: #667eea; text-decoration: none; font-size: 14px; font-weight: 500;">TikTok</a>
                     </div>
                   </td>
                 </tr>
                 
                 <!-- Footer -->
                 <tr>
-                  <td style="background-color: #f9fafb; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
-                    <p style="margin: 0 0 10px 0; color: #6b7280; font-size: 14px;">
-                      Made with passion for students everywhere
+                  <td style="background-color: #faf9f6; padding: 30px 40px; text-align: center;">
+                    <p style="margin: 0 0 8px 0; color: #999; font-size: 13px;">
+                      Made for students everywhere
                     </p>
-                    <p style="margin: 0; color: #9ca3af; font-size: 12px;">
-                      © 2026 CourseVault. All rights reserved.
+                    <p style="margin: 0; color: #bbb; font-size: 12px;">
+                      © 2026 CourseVault
                     </p>
                   </td>
                 </tr>
@@ -124,33 +172,35 @@ export async function sendWelcomeEmail(email: string) {
       </html>
     `,
     text: `
-Welcome to CourseVault! 🎉
+COURSEVAULT
 
-You're on the waitlist!
+January 30, 2026
 
-Thank you for joining the CourseVault waitlist. You're one step closer to revolutionizing how you study.
+Keep it simple.
+Keep it separate.
 
-What's Next?
-- We'll email you when we launch
-- Get early access to all premium features  
-- Exclusive discounts for early supporters
-- Be part of shaping the future of AI-powered learning
+Your biggest study challenge? Staying organized across multiple courses and materials.
 
-Coming Features:
-🧠 AI Quiz Generator
-✨ Smart Flashcards
-💬 PDF Chat Assistant
-📄 AI Summaries
-👥 Collaborative Study Rooms
-⏱️ Pomodoro Timer
+But what if your Study Space only had access to your Study materials? And your Personal space only your Personal content?
+
+What happens next:
+→ We'll notify you when we launch
+→ Early access to all premium features
+→ Exclusive pricing for early supporters
+→ Help shape the future of AI-powered learning
+
+Coming soon:
+AI Quiz Generator          Smart Flashcards
+PDF Chat Assistant         AI Summaries
+Study Rooms               Pomodoro Timer
 
 Stay connected:
 Twitter: https://x.com/coursevaultapp
 Instagram: https://www.instagram.com/coursevault.app/
 TikTok: https://www.tiktok.com/@coursevaultapp
 
-Made with passion for students everywhere
-© 2026 CourseVault. All rights reserved.
+Made for students everywhere
+© 2026 CourseVault
     `,
   };
 
@@ -168,137 +218,187 @@ export async function sendLaunchEmail(email: string): Promise<boolean> {
   const mailOptions = {
     from: `CourseVault <${process.env.GMAIL_USER}>`,
     to: email,
-    subject: '🚀 CourseVault is LIVE! Your Early Access is Ready',
+    subject: 'CourseVault is live',
     html: `
       <!DOCTYPE html>
       <html>
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CourseVault is Live!</title>
+        <title>CourseVault is Live</title>
       </head>
-      <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f3f4f6;">
+      <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #faf9f6;">
         <table role="presentation" style="width: 100%; border-collapse: collapse;">
           <tr>
-            <td align="center" style="padding: 40px 0;">
-              <table role="presentation" style="width: 600px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <td align="center" style="padding: 60px 20px;">
+              <table role="presentation" style="width: 560px; max-width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 24px; overflow: hidden;">
                 
-                <!-- Header with gradient -->
+                <!-- Logo/Header -->
                 <tr>
-                  <td style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 40px 30px; text-align: center;">
-                    <h1 style="margin: 0; color: #ffffff; font-size: 36px; font-weight: bold;">
-                      🎉 We're Live!
-                    </h1>
+                  <td style="padding: 50px 40px 30px 40px; text-align: center;">
+                    <div style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 16px 32px; border-radius: 12px;">
+                      <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600; letter-spacing: 0.5px;">
+                        COURSEVAULT
+                      </h1>
+                    </div>
                   </td>
                 </tr>
                 
-                <!-- Main content -->
+                <!-- Date -->
                 <tr>
-                  <td style="padding: 40px 30px;">
-                    <h2 style="margin: 0 0 20px 0; color: #1f2937; font-size: 24px; font-weight: 600;">
-                      CourseVault is officially here! 🚀
-                    </h2>
-                    
-                    <p style="margin: 0 0 20px 0; color: #4b5563; font-size: 16px; line-height: 1.6;">
-                      Thank you for your patience and support! As an early waitlist member, you now have <strong style="color: #10b981;">exclusive early access</strong> to all our features.
+                  <td style="padding: 0 40px;">
+                    <p style="margin: 0; color: #999; font-size: 13px; text-align: center; letter-spacing: 1px; text-transform: uppercase;">
+                      We're live
                     </p>
-                    
-                    <!-- CTA Button -->
-                    <div style="text-align: center; margin: 30px 0;">
-                      <a href="https://coursevault.app" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px 40px; border-radius: 12px; font-size: 18px; font-weight: 600; box-shadow: 0 4px 6px rgba(102, 126, 234, 0.4);">
-                        🎓 Start Learning Now
+                  </td>
+                </tr>
+                
+                <!-- Main Heading -->
+                <tr>
+                  <td style="padding: 40px 40px 20px 40px;">
+                    <h2 style="margin: 0; color: #1a1a1a; font-size: 28px; font-weight: 600; text-align: center; line-height: 1.3;">
+                      Your wait is over.<br>Let's revolutionize studying.
+                    </h2>
+                  </td>
+                </tr>
+                
+                <!-- Content -->
+                <tr>
+                  <td style="padding: 20px 40px;">
+                    <p style="margin: 0; color: #4a4a4a; font-size: 16px; line-height: 1.7; text-align: center;">
+                      As an early waitlist member, you have <strong style="color: #667eea;">exclusive early access</strong> to everything we've built.
+                    </p>
+                  </td>
+                </tr>
+                
+                <!-- CTA Button -->
+                <tr>
+                  <td style="padding: 30px 40px;">
+                    <div style="text-align: center;">
+                      <a href="https://coursevault.app" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px 48px; border-radius: 12px; font-size: 16px; font-weight: 600;">
+                        Start learning now
                       </a>
                     </div>
-                    
-                    <div style="background-color: #f0fdf4; border-left: 4px solid #10b981; padding: 20px; margin: 30px 0; border-radius: 8px;">
-                      <p style="margin: 0 0 15px 0; color: #1f2937; font-size: 16px; font-weight: 600;">
-                        🎁 Your Early Bird Benefits:
-                      </p>
-                      <ul style="margin: 0; padding-left: 20px; color: #4b5563; font-size: 15px; line-height: 1.8;">
-                        <li><strong>30-day FREE trial</strong> of all premium features</li>
-                        <li><strong>50% discount</strong> on your first year subscription</li>
-                        <li>Priority customer support</li>
-                        <li>First access to new features and updates</li>
-                        <li>Exclusive community access</li>
-                      </ul>
-                    </div>
-                    
-                    <div style="margin: 30px 0;">
-                      <h3 style="margin: 0 0 15px 0; color: #1f2937; font-size: 18px; font-weight: 600;">
-                        ✨ Now Available:
+                  </td>
+                </tr>
+                
+                <!-- Benefits Box -->
+                <tr>
+                  <td style="padding: 20px 40px 30px 40px;">
+                    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #f3e8f7 100%); border-radius: 16px; padding: 32px;">
+                      <h3 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: 600;">
+                        Your early bird benefits
                       </h3>
-                      <table role="presentation" style="width: 100%; border-collapse: collapse;">
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            🧠 AI Quiz Generator
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            ✨ Smart Flashcards
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            💬 PDF Chat Assistant
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            📄 AI-Powered Summaries
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            👥 Study Rooms
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            ⏱️ Pomodoro Timer
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            🎯 Exam Mode
-                          </td>
-                          <td style="padding: 10px 0; color: #4b5563; font-size: 15px;">
-                            🗺️ Mind Mapping
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-
-                    <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px 0; border-radius: 8px;">
-                      <p style="margin: 0; color: #92400e; font-size: 15px; line-height: 1.6;">
-                        ⚡ <strong>Limited Time:</strong> Your discount code is waiting in your account dashboard. Sign up within the next 7 days to claim all your early bird benefits!
-                      </p>
-                    </div>
-                    
-                    <div style="text-align: center; margin: 30px 0;">
-                      <p style="margin: 0 0 15px 0; color: #4b5563; font-size: 15px;">
-                        Questions? Need help getting started?
-                      </p>
-                      <p style="margin: 0; color: #4b5563; font-size: 15px;">
-                        Reply to this email or reach out on social media:
-                      </p>
-                      <div style="margin-top: 15px;">
-                        <a href="https://x.com/coursevaultapp" style="display: inline-block; margin: 0 10px; color: #667eea; text-decoration: none; font-weight: 600;">Twitter</a>
-                        <a href="https://www.instagram.com/coursevault.app/" style="display: inline-block; margin: 0 10px; color: #667eea; text-decoration: none; font-weight: 600;">Instagram</a>
-                        <a href="https://www.tiktok.com/@coursevaultapp" style="display: inline-block; margin: 0 10px; color: #667eea; text-decoration: none; font-weight: 600;">TikTok</a>
+                      <div style="margin-bottom: 12px;">
+                        <p style="margin: 0; color: #2a2a2a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                          <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                          30-day free trial of premium features
+                        </p>
+                      </div>
+                      <div style="margin-bottom: 12px;">
+                        <p style="margin: 0; color: #2a2a2a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                          <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                          50% off your first year
+                        </p>
+                      </div>
+                      <div style="margin-bottom: 12px;">
+                        <p style="margin: 0; color: #2a2a2a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                          <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                          Priority support
+                        </p>
+                      </div>
+                      <div style="margin-bottom: 12px;">
+                        <p style="margin: 0; color: #2a2a2a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                          <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                          Early access to new features
+                        </p>
+                      </div>
+                      <div>
+                        <p style="margin: 0; color: #2a2a2a; font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative;">
+                          <span style="position: absolute; left: 0; color: #667eea;">→</span>
+                          Exclusive community access
+                        </p>
                       </div>
                     </div>
-
-                    <div style="text-align: center; margin: 40px 0 20px 0;">
-                      <p style="margin: 0; color: #1f2937; font-size: 18px; font-weight: 600;">
-                        Let's revolutionize how you study! 📚✨
+                  </td>
+                </tr>
+                
+                <!-- Features Section -->
+                <tr>
+                  <td style="padding: 0 40px 30px 40px;">
+                    <h3 style="margin: 0 0 20px 0; color: #1a1a1a; font-size: 18px; font-weight: 600;">
+                      Now available
+                    </h3>
+                    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px; width: 50%;">
+                          AI Quiz Generator
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px; width: 50%;">
+                          Smart Flashcards
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px;">
+                          PDF Chat Assistant
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px;">
+                          AI Summaries
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px;">
+                          Study Rooms
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px;">
+                          Pomodoro Timer
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 8px 12px 8px 0; color: #4a4a4a; font-size: 15px;">
+                          Exam Mode
+                        </td>
+                        <td style="padding: 8px 0 8px 12px; color: #4a4a4a; font-size: 15px;">
+                          Mind Mapping
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                
+                <!-- Limited Time Notice -->
+                <tr>
+                  <td style="padding: 0 40px 40px 40px;">
+                    <div style="background: #fff8e1; border-left: 3px solid #ffa726; padding: 20px; border-radius: 12px;">
+                      <p style="margin: 0; color: #2a2a2a; font-size: 14px; line-height: 1.6;">
+                        <strong>Limited time:</strong> Sign up within 7 days to claim your discount code and all early bird benefits.
                       </p>
+                    </div>
+                  </td>
+                </tr>
+                
+                <!-- Support Section -->
+                <tr>
+                  <td style="padding: 0 40px 40px 40px; text-align: center;">
+                    <p style="margin: 0 0 16px 0; color: #6a6a6a; font-size: 14px;">
+                      Questions? Reply to this email or reach out on social
+                    </p>
+                    <div>
+                      <a href="https://x.com/coursevaultapp" style="display: inline-block; margin: 0 12px; color: #667eea; text-decoration: none; font-size: 14px; font-weight: 500;">Twitter</a>
+                      <a href="https://www.instagram.com/coursevault.app/" style="display: inline-block; margin: 0 12px; color: #667eea; text-decoration: none; font-size: 14px; font-weight: 500;">Instagram</a>
+                      <a href="https://www.tiktok.com/@coursevaultapp" style="display: inline-block; margin: 0 12px; color: #667eea; text-decoration: none; font-size: 14px; font-weight: 500;">TikTok</a>
                     </div>
                   </td>
                 </tr>
                 
                 <!-- Footer -->
                 <tr>
-                  <td style="background-color: #f9fafb; padding: 30px; text-align: center; border-top: 1px solid #e5e7eb;">
-                    <p style="margin: 0 0 10px 0; color: #6b7280; font-size: 14px;">
-                      Made with passion for students everywhere
+                  <td style="background-color: #faf9f6; padding: 30px 40px; text-align: center;">
+                    <p style="margin: 0 0 8px 0; color: #999; font-size: 13px;">
+                      Made for students everywhere
                     </p>
-                    <p style="margin: 0; color: #9ca3af; font-size: 12px;">
-                      © 2026 CourseVault. All rights reserved.
+                    <p style="margin: 0; color: #bbb; font-size: 12px;">
+                      © 2026 CourseVault
                     </p>
                   </td>
                 </tr>
@@ -311,40 +411,37 @@ export async function sendLaunchEmail(email: string): Promise<boolean> {
       </html>
     `,
     text: `
-🎉 CourseVault is LIVE! 🚀
+COURSEVAULT
 
-Thank you for your patience and support! As an early waitlist member, you now have exclusive early access to all our features.
+We're live
 
-🎁 Your Early Bird Benefits:
-- 30-day FREE trial of all premium features
-- 50% discount on your first year subscription
-- Priority customer support
-- First access to new features and updates
-- Exclusive community access
+Your wait is over.
+Let's revolutionize studying.
 
-✨ Now Available:
-🧠 AI Quiz Generator
-✨ Smart Flashcards
-💬 PDF Chat Assistant
-📄 AI-Powered Summaries
-👥 Study Rooms
-⏱️ Pomodoro Timer
-🎯 Exam Mode
-🗺️ Mind Mapping
+As an early waitlist member, you have exclusive early access to everything we've built.
 
-⚡ Limited Time: Your discount code is waiting in your account dashboard. Sign up within the next 7 days to claim all your early bird benefits!
+→ Start learning now: https://coursevault.app
 
-👉 Get Started: https://coursevault.app
+Your early bird benefits:
 
-Questions? Reply to this email or reach out on social:
+→ Early access to new features
+→ Exclusive community access
+
+Now available:
+AI Quiz Generator          Smart Flashcards
+PDF Chat Assistant         AI Summaries
+Study Rooms               Pomodoro Timer
+Exam Mode                 Mind Mapping
+
+Limited time: Sign up within 7 days to claim your discount code and all early bird benefits.
+
+Questions? Reply to this email or reach out:
 Twitter: https://x.com/coursevaultapp
 Instagram: https://www.instagram.com/coursevault.app/
 TikTok: https://www.tiktok.com/@coursevaultapp
 
-Let's revolutionize how you study! 📚✨
-
-Made with passion for students everywhere
-© 2026 CourseVault. All rights reserved.
+Made for students everywhere
+© 2026 CourseVault
     `,
   };
 
