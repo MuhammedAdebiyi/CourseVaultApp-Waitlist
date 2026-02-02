@@ -165,7 +165,7 @@ export default function Home() {
         <div className="text-center mb-12 sm:mb-16 px-4">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-6 sm:px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl">
             <div>
-              <div className="text-2xl sm:text-3xl font-bold text-white">1,000+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-white">200+</div>
               <div className="text-xs sm:text-sm text-gray-400">Waitlist</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-white/10"></div>
@@ -178,7 +178,7 @@ export default function Home() {
             <div className="block sm:hidden w-12 h-px bg-white/10"></div>
             <div>
               <div className="text-2xl sm:text-3xl font-bold text-white">FREE</div>
-              <div className="text-xs sm:text-sm text-gray-400">30-Day Trial</div>
+              <div className="text-xs sm:text-sm text-gray-400">7-Day Trial</div> 
             </div>
           </div>
         </div>
@@ -229,7 +229,7 @@ export default function Home() {
             Made with passion for students everywhere
           </p>
           <p className="text-gray-500 text-[10px] sm:text-xs mt-2">
-            © 2025 CourseVault. All rights reserved.
+            © 2026 CourseVault. All rights reserved.
           </p>
         </div>
       </div>
